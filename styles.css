@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    background-color:  hsl(233, 47%, 7%);
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20vh;
+ 
+}
+.section{
+
+    border: solid 1px black;
+    background-color: hsl(244, 38%, 16%);
+    max-width: 60vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-height:90vh ;
+    overflow: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+.content{
+    width:100%;
+    padding-top:10%;
+    padding-left: 5%;
+}
+
+.content p{
+    color:hsla(0, 0%, 100%, 0.6);
+    margin-bottom:10%;
+    margin-top:10%;
+    font-size: 15px;
+    line-height: 25px;
+  
+}
+.content h1{
+    color:white;
+    font-size: 32px;
+    margin-bottom: 2%;
+
+}
+.content span{
+    color:hsl(277, 64%, 61%);
+}
+
+.card{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    /* border: 1px solid pink; */
+    line-height: 5px;
+    padding-bottom: 20%;
+    text-transform: uppercase;
+}
+.card p{
+    
+    text-align: left;
+    align-self: left;
+    font-weight: 100;
+    line-height: 20px;
+    font-size: 10px;
+    
+}
+
+.image-holder img{
+    width: 30vw;
+    /* width:100%; */
+    height:100%;
+    /* object-fit: cover; */
+    padding-left:10% ;
+    padding-right: 0;
+}
+.image-holder{
+    position: relative;
+}
+.image-holder::after{
+    position: absolute;
+    content: "";
+    opacity: 0.5;
+    height: 100%;
+    width:30vw;
+    background-color: blueviolet;
+    left:0;
+    top:0;
+    margin-left:10%;
+}
+
+@media only screen and (max-width:376px) {
+    body{
+        margin: 0;
+        padding: 0%;
+        text-align: center  ;
+    }
+    .section{
+        flex-direction: column-reverse;
+        margin-left: 10px;
+        margin-right: 10px;
+        /* width: 100vw; */
+        overflow: visible;
+        /* height: 100%; */
+        
+    }
+ .card{
+    flex-direction: column ;
+ }   
+ .image-holder img{
+    /* width: 30vw; */
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+}
